@@ -1,0 +1,148 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warbler</title>
+
+    <link rel="stylesheet" href="/css/soundscapes.css" />
+    <script src="/js/soundscapes.js" defer type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  </head>
+  <body>
+    <div id="loading-overlay">
+      <div class="loading-container">
+        <div class="bird-loader">
+          <div class="duck-down"></div>
+          <div class="duck-up"></div>
+        </div>
+        <p id="loading-text">Flying somewhere new...</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- left inputs -->
+      <div id="soundscape-info">
+        <div id="location-box">
+          <div id="pin-icon">
+            <svg
+            width="56px"
+            height="56px"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1"
+            stroke="#ffffff"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+            />
+          </svg>
+          </div>
+          <div id="location-info"></div>
+        </div>
+
+        <div id="soundscape-audio-box"></div>
+        <button id="loadData" aria-label="go to new soundscape">
+          <svg
+            width="80px"
+            height="80px"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#ffffff"
+            stroke="#ffffff"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke="#CCCCCC"
+              stroke-width="2.072"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                fill="none"
+                stroke="#ffffff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+                d="M448,341.37V170.61A32,32,0,0,0,432.11,143l-152-88.46a47.94,47.94,0,0,0-48.24,0L79.89,143A32,32,0,0,0,64,170.61V341.37A32,32,0,0,0,79.89,369l152,88.46a48,48,0,0,0,48.24,0l152-88.46A32,32,0,0,0,448,341.37Z"
+              ></path>
+              <polyline
+                fill="none"
+                stroke="#ffffff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+                points="69 153.99 256 263.99 443 153.99"
+              ></polyline>
+              <line
+                fill="none"
+                stroke="#ffffff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="16"
+                x1="256"
+                y1="463.99"
+                x2="256"
+                y2="263.99"
+              ></line>
+              <ellipse cx="256" cy="152" rx="24" ry="16"></ellipse>
+              <ellipse cx="208" cy="296" rx="16" ry="24"></ellipse>
+              <ellipse cx="112" cy="328" rx="16" ry="24"></ellipse>
+              <ellipse cx="304" cy="296" rx="16" ry="24"></ellipse>
+              <ellipse cx="400" cy="240" rx="16" ry="24"></ellipse>
+              <ellipse cx="304" cy="384" rx="16" ry="24"></ellipse>
+              <ellipse cx="400" cy="328" rx="16" ry="24"></ellipse>
+            </g>
+          </svg>
+        </button>
+      </div>
+
+      <div class="main-container">
+        <div id="left-side">
+          <div class="carousel-container">
+            <button class="carousel-button prev" aria-label="Previous birds">&#9650;</button>
+            <div id="image-box" class="bird-container"></div>
+            <button class="carousel-button next" aria-label="Next birds">&#9660;</button>
+            <div class="carousel-pagination"></div>
+          </div>
+        </div>
+
+        <div id="right-side">
+          <div id="recordist-box">
+            <div id="remark"></div>
+            <div id="upload-data"></div>
+            <div id="links"></div>
+          </div>
+          <div id="user-icon">
+            <svg
+              width="64px"
+              height="64px"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1"
+              stroke="#ffffff"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

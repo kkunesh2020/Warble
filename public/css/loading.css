@@ -1,0 +1,86 @@
+/* styling for the loading overlay */
+
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(15px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#loading-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-container {
+  text-align: center;
+  color: white;
+}
+
+.bird-loader {
+  position: relative;
+  margin: 0 auto 30px;
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.duck-down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://cdn.glitch.global/e3f6f947-461f-49a3-b110-007b2390571c/duck-outline-down.png?v=1746712753863");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: flap-down 0.75s infinite;
+  opacity: 1;
+}
+
+.duck-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://cdn.glitch.global/e3f6f947-461f-49a3-b110-007b2390571c/duck-outline-up.png?v=1746712760779");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: flap-up 0.75s infinite;
+  opacity: 0; /* Start hidden */
+}
+
+@keyframes flap-down {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes flap-up {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.loading-container p {
+  font-size: 18px;
+  margin-top: 15px;
+  opacity: 0.8;
+}

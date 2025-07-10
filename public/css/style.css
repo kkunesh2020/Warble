@@ -1,0 +1,85 @@
+/* styling for index.html */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+
+:root {
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --font-family: "EB Garamond", serif;
+  --font-weight: 300;
+  --line-height: 1.5;
+  --border-size: 0.5px;
+  --bg-image: url("https://cdn.glitch.global/e3f6f947-461f-49a3-b110-007b2390571c/TemperateBroadleaf.jpg?v=1745525328642")
+}
+
+html {
+  font-size: 18px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  font-family: var(--font-family);
+  background-image: var(--bg-image);
+  color: var(--color-light);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  text-align: center;
+}
+
+br {
+  margin: 1rem;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(16px);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem;
+  width: 568px;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+#to-soundscapes {
+  display: flex;
+  align-self: center;
+  background: none;
+  border: none;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#to-soundscapes:hover {
+  cursor: pointer;
+  transform: rotate(30deg);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+@media (max-width: 600px) {
+  
+  .wrapper {
+    width: auto;
+  }
+  
+}
