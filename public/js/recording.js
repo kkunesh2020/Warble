@@ -3,7 +3,7 @@ import getData from "./getData.js";
 import loadBirdData from "./bird.js";
 
 const soundscapeURL = "/soundscape";
-const imagePlaceholder = "https://cdn.glitch.global/e3f6f947-461f-49a3-b110-007b2390571c/bird-placeholder-image.png?v=1745102459099";
+const imagePlaceholder = "images/Placeholder.png";
 
 const imageDisplay = document.querySelector("#image-box");
 const container = document.querySelector(".container");
@@ -71,7 +71,7 @@ const getBiomeImage = async (currSoundscape) => {
   if (biomeImage.image == "") {
     container.style.backgroundImage = `url(${imagePlaceholder})`;
   } else {
-    container.style.backgroundImage = `url(${biomeImage.image})`;
+    container.style.backgroundImage = `url('images/${biomeImage.image}')`;
     container.style.backgroundSize = "cover";
   }
 };

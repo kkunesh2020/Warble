@@ -7,8 +7,8 @@ const nuthatchURL = "/birdImage";
 const wikimediaURL = "/wikimedia";
 
 const imageDisplay = document.querySelector("#image-box");
-const imagePlaceholder = "https://cdn.glitch.global/e3f6f947-461f-49a3-b110-007b2390571c/bird-placeholder-image.png?v=1745102459099";
-const infoIcon = "https://cdn.glitch.global/e3f6f947-461f-49a3-b110-007b2390571c/info-icon.svg?v=1747062392823"
+const imagePlaceholder = "images/Placeholder.png";
+const infoIcon = "images/info-icon.svg";
 
 // gets the data from the api and initializes a card with it
 export default async function loadBirdData(species) {

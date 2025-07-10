@@ -39,7 +39,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://cdn.glitch.global/e3f6f947-461f-49a3-b110-007b2390571c/duck-outline-down.png?v=1746712753863");
+  background-image: url('../images/duck-outline-down.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -53,7 +53,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://cdn.glitch.global/e3f6f947-461f-49a3-b110-007b2390571c/duck-outline-up.png?v=1746712760779");
+  background-image: url('../images/duck-outline-up.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
