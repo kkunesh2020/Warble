@@ -14,6 +14,6 @@ run:
     - name: PORT
       value: "8080"
     - name: XENOCANTO_KEY
-      value-from: "arn:aws:apprunner:us-east-1:343904942231:service/warble/xenocanto-key"
+      value-from: "arn:aws:apprunner:us-east-1:343904942231:parameter/warble/xenocanto-key"
     - name: NUTHATCH_KEY
-      value-from: "arn:aws:apprunner:us-east-1:343904942231:service/warble/nuthatch-key"
+      value-from: "arn:aws:apprunner:us-east-1:343904942231:parameter/warble/nuthatch-key"
