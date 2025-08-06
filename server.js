@@ -11,7 +11,7 @@ import biomeImages from "./data/biome_images.json" assert { type: "json" };
 
 const app = express();
 const __dirname = path.resolve();
-const port = 3000;
+const port = process.env.PORT || 3000
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -162,6 +162,6 @@ app.get("/wikimedia", async (req, res) => {
 });
 
 // listen for requests
-const listener = app.listen(port, function () {
+const listener = app.listen(port, '0.0.0.0', function () {
   console.log("Your app is listening on port " + listener.address().port);
 });

@@ -87,7 +87,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
   },
   "author": "kkunesh2020",
   "license": "ISC"
