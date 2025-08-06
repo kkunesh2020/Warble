@@ -15,6 +15,6 @@ run:
       value: "8080"
   secrets:
     - name: XENOCANTO_KEY
-      value-from: "arn:aws:apprunner:us-east-1:343904942231:parameter/warble/xenocanto-key"
+      value-from: "arn:aws:ssm:us-east-1:343904942231:parameter/warble/xenocanto-key"
     - name: NUTHATCH_KEY
-      value-from: "arn:aws:apprunner:us-east-1:343904942231:parameter/warble/nuthatch-key"
+      value-from: "arn:aws:ssm:us-east-1:343904942231:parameter/warble/nuthatch-key"
