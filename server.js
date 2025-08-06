@@ -71,7 +71,7 @@ app.get("/birdData", async (req, res) => {
     }
 
     const response = await fetch(
-      `https://xeno-canto.org/api/3/recordings?query=sp:%22${species}%22+q:%22%3EC%22&key=${process.env.xenoCantoKey}`
+      `https://xeno-canto.org/api/3/recordings?query=sp:%22${species}%22+q:%22%3EC%22&key=${process.env.XENOCANTO_KEY}`
     );
 
     const data = await response.json();
@@ -103,7 +103,7 @@ app.get("/birdImage", async (req, res) => {
       `https://nuthatch.lastelm.software/v2/birds?page=1&pageSize=25&sciName=${species}&operator=AND`,
       {
         headers: {
-          "API-Key": process.env.nuthatchKey,
+          "API-Key": process.env.NUTHATCH_KEY,
         },
       }
     );
