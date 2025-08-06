@@ -12,3 +12,7 @@ run:
   env:
     - name: NODE_ENV
       value: production
+    - name: XENOCANTO_KEY
+      value-from: /warble/xenocanto-key
+    - name: NUTHATCH_KEY
+      value-from: /warble/nuthatch-key
