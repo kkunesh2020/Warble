@@ -11,5 +11,5 @@ run:
   env:
     - name: NODE_ENV
       value: production
-    - name: port
+    - name: PORT
       value: "8080"
